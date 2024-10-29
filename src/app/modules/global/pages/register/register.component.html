@@ -1,5 +1,5 @@
 <div class="flex align-items-center justify-content-center" style="height: 100vh;">
-  <p-card header="Faça login..." [style]="{ width: '360px', height: '400px'}">
+  <p-card header="Registra-me" [style]="{ width: '360px', height: '580px'}">
     <div class="flex gap-3 flex-column align-items-center m-5">
 
       <div>
@@ -11,8 +11,22 @@
 
       <div>
         <p-floatLabel>
+          <input class="h-4rem" pInputText id="email" [(ngModel)]="nickname" />
+          <label for="email">Nickname</label>
+        </p-floatLabel>
+      </div>
+
+      <div>
+        <p-floatLabel>
           <input class="h-4rem" pInputText id="username" [(ngModel)]="password" />
           <label for="username">Password</label>
+        </p-floatLabel>
+      </div>
+
+      <div>
+        <p-floatLabel>
+          <input class="h-4rem" pInputText id="email" [(ngModel)]="confirmPassword" />
+          <label for="email">Confirm Password</label>
         </p-floatLabel>
       </div>
 
@@ -20,13 +34,13 @@
     <ng-template pTemplate="footer">
       <div class="flex gap-3 mt-1">
         <p-button
-          (click)="navigateToRegister()"
-          label="Registra-me"
+          (click)="navigateToLogin()"
+          label="Login"
           severity="contrast"
           class="w-full"
           styleClass="w-full"
         />
-        <p-button label="Loga-me" class="w-full" styleClass="w-full" severity="success" (click)="handleLogin()" />
+        <p-button label="Registra-me" class="w-full" styleClass="w-full" severity="success" (click)="handleRegister()"  />
       </div>
     </ng-template>
   </p-card>
