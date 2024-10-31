@@ -34,6 +34,7 @@ export class SinginComponent {
 
     if (data.resolve) {
       this.MessageService.add({severity:'success', summary:'Success', detail:'Login success'});
+      this.router.navigate(['/home']);
     } else {
       this.MessageService.add({severity:'error', summary:'Error', detail:'Login failed'});
     }
